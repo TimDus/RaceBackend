@@ -10,7 +10,7 @@ steps:
 # Prepare Analysis Configuration task
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'svc-sonar'
+    SonarQube: 'svcsonar'
     scannerMode: 'Other'
     extraProperties: 'sonar.projectKey=YourProjectKey'
 
