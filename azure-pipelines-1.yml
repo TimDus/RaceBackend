@@ -8,11 +8,14 @@ trigger:
 
 steps:
 # Prepare Analysis Configuration task
-- task: SonarQubePrepare@4
+- task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'YourSonarqubeServerEndpoint'
+    SonarQube: 'svc-sonar'
     scannerMode: 'Other'
     extraProperties: 'sonar.projectKey=YourProjectKey'
+
+
+- task: SonarQubeAnalyze@5
 
 # Publish Quality Gate Result task
 - task: SonarQubePublish@4
